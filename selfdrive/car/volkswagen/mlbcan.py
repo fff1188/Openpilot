@@ -9,7 +9,7 @@ def create_steering_control(packer, bus, apply_steer, lkas_enabled):
     "HCA_Active": lkas_enabled,
     "SET_ME_0XFE": 0x00,
     "SET_ME_0X07": 0x00,
-    "EA_ACC_Wunschgeschwindigkeit": 327.36,
+   # "EA_ACC_Wunschgeschwindigkeit": 327.36,
   }
   return packer.make_can_msg("HCA_01", bus, values)
 

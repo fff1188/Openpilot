@@ -100,11 +100,11 @@ class CarState(CarStateBase):
         else:
           ret.gearShifter = GearShifter.drive
 
-      ret.doorOpen = any([pt_cp.vl["Gateway_72"]["ZV_FT_offen"],
-                          pt_cp.vl["Gateway_72"]["ZV_BT_offen"],
-                          pt_cp.vl["Gateway_72"]["ZV_HFS_offen"],
-                          pt_cp.vl["Gateway_72"]["ZV_HBFS_offen"],
-                          pt_cp.vl["Gateway_72"]["ZV_HD_offen"]])
+     # ret.doorOpen = any([pt_cp.vl["Gateway_72"]["ZV_FT_offen"],
+     #                     pt_cp.vl["Gateway_72"]["ZV_BT_offen"],
+     #                     pt_cp.vl["Gateway_72"]["ZV_HFS_offen"],
+     #                     pt_cp.vl["Gateway_72"]["ZV_HBFS_offen"],
+     #                     pt_cp.vl["Gateway_72"]["ZV_HD_offen"]])
 
       # ACC okay but disabled (1), ACC ready (2), a radar visibility or other fault/disruption (6 or 7)
       # currently regulating speed (3), driver accel override (4), brake only (5)
@@ -234,7 +234,7 @@ class CarState(CarStateBase):
                         pt_cp.vl["Gate_Komf_1"]["BSK_HD_Hauptraste"]])
 
     # Update seatbelt fastened status.
-    ret.seatbeltUnlatched = not bool(pt_cp.vl["Airbag_1"]["Gurtschalter_Fahrer"])
+   # ret.seatbeltUnlatched = not bool(pt_cp.vl["Airbag_1"]["Gurtschalter_Fahrer"])
 
     # Consume blind-spot monitoring info/warning LED states, if available.
     # Infostufe: BSM LED on, Warnung: BSM LED flashing

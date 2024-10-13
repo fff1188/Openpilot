@@ -92,7 +92,7 @@ class CarState(CarStateBase):
       if trans_type == TransmissionType.automatic:
         ret.gearShifter = self.parse_gear_shifter(self.CCP.shifter_values.get(pt_cp.vl["Getriebe_11"]["GE_Fahrstufe"], None))
       elif trans_type == TransmissionType.direct:
-        ret.gearShifter = self.parse_gear_shifter(self.CCP.shifter_values.get(pt_cp.vl["EV_Gearshift"]["GearPosition"], None))
+        ret.gearShifter = self.parse_gear_shifter(self.CCP.shifter_values.get(pt_cp.vl["TSK_01"]["GearPosition"], None))
       elif trans_type == TransmissionType.manual:
         ret.clutchPressed = not pt_cp.vl["Motor_14"]["MO_Kuppl_schalter"]
         if bool(pt_cp.vl["Gateway_72"]["BCM1_Rueckfahrlicht_Schalter"]):

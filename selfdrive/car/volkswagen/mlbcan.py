@@ -5,6 +5,10 @@ def create_steering_control(packer, bus, apply_steer, lkas_enabled):
     "HCA_01_LM_OffSign": 1 if apply_steer < 0 else 0,
     "SG_ SET_ME_0X3": 0x0E,
     "HCA_01_Sendestatus": 1 if lkas_enabled else 0,
+    "HCA_Standby": not lkas_enabled,
+    "HCA_Active": lkas_enabled,
+    "SET_ME_0XFE": 0x00,
+    "SET_ME_0X07": 0x00,
     "EA_ACC_Wunschgeschwindigkeit": 327.36,
   }
   return packer.make_can_msg("HCA_01", bus, values)

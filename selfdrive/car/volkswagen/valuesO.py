@@ -397,9 +397,8 @@ class CAR(Platforms):
     [
       VWCarDocs("Audi A4 2015-16"),
       VWCarDocs("Audi S4 2015-16"),
-      VWCarDocs("Audi Q5 2016-18"),
     ],
-    VolkswagenCarSpecs(mass=1900, wheelbase=2.81),
+    VolkswagenCarSpecs(mass=1650, wheelbase=2.81),
     chassis_codes={"FL"},
     wmis={WMI.AUDI_GERMANY_CAR},
   )

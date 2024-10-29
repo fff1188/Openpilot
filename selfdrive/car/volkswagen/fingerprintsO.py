@@ -831,20 +831,16 @@ FW_VERSIONS = {
   CAR.AUDI_A4_MK4: {
     (Ecu.engine, 0x7e0, None): [
       b'\xf1\x878K5907551G \xf1\x890007',
-      b'\xf1\x878R2907115C \xf1\x890002',
-
     ],
     (Ecu.transmission, 0x7e1, None): [
       b'\xf1\x878K5927156D \xf1\x890003',
-      b'\xf1\x878R0927158AT\xf1\x891004',
     ],
     # FIXME: placeholder
     (Ecu.srs, 0x715, None): [
-      b'\xf1\x878RD959655B \xf1\x890610\xf1\x82\x040L040201',
+      b'PLACEHOLDER',
     ],
     (Ecu.eps, 0x712, None): [
       b'\xf1\x878K0909144J \xf1\x890509\xf1\x82\x01\n\x1a',
-      b'\xf1\x878R0909144Q \xf1\x890702\xf1\x82\x02\x04<--',
     ],
     (Ecu.fwdRadar, 0x757, None): [
       # FIXME: placeholder
